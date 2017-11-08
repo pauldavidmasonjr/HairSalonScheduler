@@ -16,14 +16,16 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
     // variables
     @IBOutlet var firstNameTextField: UITextField!
     @IBOutlet var lastNameTextField: UITextField!
-    
     @IBOutlet var genderTextField: UITextField!
+    
+    @IBOutlet var phoneNumberTextField: UITextField!
+    
     // gender array
     let gender = ["Male",
                   "Female"]
+    
     // needed variable to save gender input
     var selectedGender: String?
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

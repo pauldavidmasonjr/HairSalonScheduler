@@ -15,6 +15,7 @@
 		E38895431FB241FC00F14A33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E38895411FB241FC00F14A33 /* LaunchScreen.storyboard */; };
 		E388954E1FB241FC00F14A33 /* HairSalonSchedulerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E388954D1FB241FC00F14A33 /* HairSalonSchedulerTests.swift */; };
 		E38895591FB241FC00F14A33 /* HairSalonSchedulerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38895581FB241FC00F14A33 /* HairSalonSchedulerUITests.swift */; };
+		F3D0122F1FB2C36100AEE99E /* textFieldMaxLengths.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D0122E1FB2C36100AEE99E /* textFieldMaxLengths.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		E38895541FB241FC00F14A33 /* HairSalonSchedulerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HairSalonSchedulerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E38895581FB241FC00F14A33 /* HairSalonSchedulerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HairSalonSchedulerUITests.swift; sourceTree = "<group>"; };
 		E388955A1FB241FC00F14A33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3D0122E1FB2C36100AEE99E /* textFieldMaxLengths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textFieldMaxLengths.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				E38895381FB241FC00F14A33 /* FirstViewController.swift */,
 				E388953A1FB241FC00F14A33 /* SecondViewController.swift */,
 				E388953C1FB241FC00F14A33 /* Main.storyboard */,
+				F3D0122E1FB2C36100AEE99E /* textFieldMaxLengths.swift */,
 				E388953F1FB241FC00F14A33 /* Assets.xcassets */,
 				E38895411FB241FC00F14A33 /* LaunchScreen.storyboard */,
 				E38895441FB241FC00F14A33 /* Info.plist */,
@@ -260,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3D0122F1FB2C36100AEE99E /* textFieldMaxLengths.swift in Sources */,
 				E388953B1FB241FC00F14A33 /* SecondViewController.swift in Sources */,
 				E38895371FB241FC00F14A33 /* AppDelegate.swift in Sources */,
 				E38895391FB241FC00F14A33 /* FirstViewController.swift in Sources */,
