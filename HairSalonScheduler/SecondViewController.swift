@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class SecondViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate{
 
     // image view for photo upload
     @IBOutlet var imageView: UIImageView!
@@ -17,8 +17,10 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
     @IBOutlet var firstNameTextField: UITextField!
     @IBOutlet var lastNameTextField: UITextField!
     @IBOutlet var genderTextField: UITextField!
+    @IBOutlet var areaCodeTextField: UITextField!
+    @IBOutlet var officePrefixTextField: UITextField!
+    @IBOutlet var lineNumberTextField: UITextField!
     
-    @IBOutlet var phoneNumberTextField: UITextField!
     
     // gender array
     let gender = ["Male",
@@ -32,6 +34,16 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
         // Do any additional setup after loading the view, typically from a nib.
         createGenderPicker()
         createToolBar()
+        self.areaCodeTextField.delegate = self
+        self.officePrefixTextField.delegate = self
+        self.lineNumberTextField.delegate = self
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String)-> Bool {
+        let allowedCharacters = CharacterSet.decimalDigits
+        let characterSet = CharacterSet(charactersIn: string)
+        
+        return allowedCharacters.isSuperset(of: characterSet)
     }
 
     @IBAction func takePhoto(_ sender: Any) {
