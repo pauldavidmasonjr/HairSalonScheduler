@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		002A854F6FDECF621CC0F40E /* Pods_HairSalonScheduler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D9605C6E107A7EA5D54E39 /* Pods_HairSalonScheduler.framework */; };
+		7D790CD953CB48A24C0FE329 /* Pods_HairSalonSchedulerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4707176E5FC2C7C933468DDC /* Pods_HairSalonSchedulerUITests.framework */; };
+		81500F80BB15D9DDA6F7698E /* Pods_HairSalonSchedulerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A24F8FFC304FCF60BD7508EC /* Pods_HairSalonSchedulerTests.framework */; };
+		E3096DE41FB752F9005076A7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3096DE31FB752F8005076A7 /* GoogleService-Info.plist */; };
 		E38895371FB241FC00F14A33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38895361FB241FC00F14A33 /* AppDelegate.swift */; };
 		E38895391FB241FC00F14A33 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38895381FB241FC00F14A33 /* FirstViewController.swift */; };
 		E388953B1FB241FC00F14A33 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E388953A1FB241FC00F14A33 /* SecondViewController.swift */; };
@@ -37,6 +41,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		089D70F3748A3BFD351ADA1D /* Pods-HairSalonSchedulerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HairSalonSchedulerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HairSalonSchedulerTests/Pods-HairSalonSchedulerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4707176E5FC2C7C933468DDC /* Pods_HairSalonSchedulerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HairSalonSchedulerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49E88682C0D20BC47946FDEC /* Pods-HairSalonSchedulerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HairSalonSchedulerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HairSalonSchedulerUITests/Pods-HairSalonSchedulerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6A63FA0FF6C9BA88F91B40FF /* Pods-HairSalonScheduler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HairSalonScheduler.release.xcconfig"; path = "Pods/Target Support Files/Pods-HairSalonScheduler/Pods-HairSalonScheduler.release.xcconfig"; sourceTree = "<group>"; };
+		7388F6657B8BE674DEDCCC56 /* Pods-HairSalonSchedulerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HairSalonSchedulerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HairSalonSchedulerUITests/Pods-HairSalonSchedulerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		94D9605C6E107A7EA5D54E39 /* Pods_HairSalonScheduler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HairSalonScheduler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A24F8FFC304FCF60BD7508EC /* Pods_HairSalonSchedulerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HairSalonSchedulerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD07E09D7F3F563984E81BAF /* Pods-HairSalonSchedulerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HairSalonSchedulerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HairSalonSchedulerTests/Pods-HairSalonSchedulerTests.release.xcconfig"; sourceTree = "<group>"; };
+		C0B7D34719DBE24C2C97452B /* Pods-HairSalonScheduler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HairSalonScheduler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HairSalonScheduler/Pods-HairSalonScheduler.debug.xcconfig"; sourceTree = "<group>"; };
+		E3096DE31FB752F8005076A7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E38895331FB241FC00F14A33 /* HairSalonScheduler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HairSalonScheduler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E38895361FB241FC00F14A33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E38895381FB241FC00F14A33 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				002A854F6FDECF621CC0F40E /* Pods_HairSalonScheduler.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81500F80BB15D9DDA6F7698E /* Pods_HairSalonSchedulerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,19 +90,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D790CD953CB48A24C0FE329 /* Pods_HairSalonSchedulerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0322CE2A67BF2D50479E2879 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C0B7D34719DBE24C2C97452B /* Pods-HairSalonScheduler.debug.xcconfig */,
+				6A63FA0FF6C9BA88F91B40FF /* Pods-HairSalonScheduler.release.xcconfig */,
+				089D70F3748A3BFD351ADA1D /* Pods-HairSalonSchedulerTests.debug.xcconfig */,
+				AD07E09D7F3F563984E81BAF /* Pods-HairSalonSchedulerTests.release.xcconfig */,
+				49E88682C0D20BC47946FDEC /* Pods-HairSalonSchedulerUITests.debug.xcconfig */,
+				7388F6657B8BE674DEDCCC56 /* Pods-HairSalonSchedulerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5C32F9E4F4F8F4A9335C3616 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				94D9605C6E107A7EA5D54E39 /* Pods_HairSalonScheduler.framework */,
+				A24F8FFC304FCF60BD7508EC /* Pods_HairSalonSchedulerTests.framework */,
+				4707176E5FC2C7C933468DDC /* Pods_HairSalonSchedulerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E388952A1FB241FC00F14A33 = {
 			isa = PBXGroup;
 			children = (
+				E3096DE31FB752F8005076A7 /* GoogleService-Info.plist */,
 				E38895351FB241FC00F14A33 /* HairSalonScheduler */,
 				E388954C1FB241FC00F14A33 /* HairSalonSchedulerTests */,
 				E38895571FB241FC00F14A33 /* HairSalonSchedulerUITests */,
 				E38895341FB241FC00F14A33 /* Products */,
+				0322CE2A67BF2D50479E2879 /* Pods */,
+				5C32F9E4F4F8F4A9335C3616 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,9 +184,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E388955D1FB241FC00F14A33 /* Build configuration list for PBXNativeTarget "HairSalonScheduler" */;
 			buildPhases = (
+				6DF8195BC18CE66CE542F729 /* [CP] Check Pods Manifest.lock */,
 				E388952F1FB241FC00F14A33 /* Sources */,
 				E38895301FB241FC00F14A33 /* Frameworks */,
 				E38895311FB241FC00F14A33 /* Resources */,
+				4C1C1C673D1B254BD4EF3ED0 /* [CP] Embed Pods Frameworks */,
+				7C367ECF679153059074DDBA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -158,9 +204,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E38895601FB241FC00F14A33 /* Build configuration list for PBXNativeTarget "HairSalonSchedulerTests" */;
 			buildPhases = (
+				BDA976314305E2FAA2192E86 /* [CP] Check Pods Manifest.lock */,
 				E38895451FB241FC00F14A33 /* Sources */,
 				E38895461FB241FC00F14A33 /* Frameworks */,
 				E38895471FB241FC00F14A33 /* Resources */,
+				E40FCA6064B109470A2A38B8 /* [CP] Embed Pods Frameworks */,
+				1B5B2255040E0D5546D7A6B7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,9 +225,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E38895631FB241FC00F14A33 /* Build configuration list for PBXNativeTarget "HairSalonSchedulerUITests" */;
 			buildPhases = (
+				A13B00DE60801684C9B0D075 /* [CP] Check Pods Manifest.lock */,
 				E38895501FB241FC00F14A33 /* Sources */,
 				E38895511FB241FC00F14A33 /* Frameworks */,
 				E38895521FB241FC00F14A33 /* Resources */,
+				000F141FB3068D3EFE227ACC /* [CP] Embed Pods Frameworks */,
+				6D3F6B84B4DF15A7A1D434E6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -240,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E38895431FB241FC00F14A33 /* LaunchScreen.storyboard in Resources */,
+				E3096DE41FB752F9005076A7 /* GoogleService-Info.plist in Resources */,
 				E38895401FB241FC00F14A33 /* Assets.xcassets in Resources */,
 				E388953E1FB241FC00F14A33 /* Main.storyboard in Resources */,
 			);
@@ -260,6 +313,160 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		000F141FB3068D3EFE227ACC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HairSalonSchedulerUITests/Pods-HairSalonSchedulerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1B5B2255040E0D5546D7A6B7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HairSalonSchedulerTests/Pods-HairSalonSchedulerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4C1C1C673D1B254BD4EF3ED0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HairSalonScheduler/Pods-HairSalonScheduler-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HairSalonScheduler/Pods-HairSalonScheduler-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D3F6B84B4DF15A7A1D434E6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HairSalonSchedulerUITests/Pods-HairSalonSchedulerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6DF8195BC18CE66CE542F729 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HairSalonScheduler-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C367ECF679153059074DDBA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HairSalonScheduler/Pods-HairSalonScheduler-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A13B00DE60801684C9B0D075 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HairSalonSchedulerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDA976314305E2FAA2192E86 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HairSalonSchedulerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E40FCA6064B109470A2A38B8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HairSalonSchedulerTests/Pods-HairSalonSchedulerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E388952F1FB241FC00F14A33 /* Sources */ = {
@@ -427,6 +634,7 @@
 		};
 		E388955E1FB241FC00F14A33 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0B7D34719DBE24C2C97452B /* Pods-HairSalonScheduler.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HairSalonScheduler/Info.plist;
@@ -439,6 +647,7 @@
 		};
 		E388955F1FB241FC00F14A33 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A63FA0FF6C9BA88F91B40FF /* Pods-HairSalonScheduler.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HairSalonScheduler/Info.plist;
@@ -451,6 +660,7 @@
 		};
 		E38895611FB241FC00F14A33 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 089D70F3748A3BFD351ADA1D /* Pods-HairSalonSchedulerTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = HairSalonSchedulerTests/Info.plist;
@@ -463,6 +673,7 @@
 		};
 		E38895621FB241FC00F14A33 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD07E09D7F3F563984E81BAF /* Pods-HairSalonSchedulerTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = HairSalonSchedulerTests/Info.plist;
@@ -475,6 +686,7 @@
 		};
 		E38895641FB241FC00F14A33 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49E88682C0D20BC47946FDEC /* Pods-HairSalonSchedulerUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = HairSalonSchedulerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -487,6 +699,7 @@
 		};
 		E38895651FB241FC00F14A33 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7388F6657B8BE674DEDCCC56 /* Pods-HairSalonSchedulerUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = HairSalonSchedulerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

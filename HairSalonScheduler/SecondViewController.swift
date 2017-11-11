@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SecondViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate{
 
@@ -29,8 +30,18 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
     // needed variable to save gender input
     var selectedGender: String?
     
+    //firebase variable
+    var refDatabase: DatabaseReference!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Firebase Connection Code
+        FirebaseApp.configure()
+        
+        refDatabase = Database.database(url: "https://hairsalonscheduler.firebaseio.com/").reference(fromURL: "https://hairsalonscheduler.firebaseio.com/").child("Clients")
+        
         // Do any additional setup after loading the view, typically from a nib.
         createGenderPicker()
         createToolBar()
