@@ -31,17 +31,25 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
     // needed variable to save gender input
     var selectedGender: String?
     
-    //firebase variable
+    //firebase DATABASE variable
     var refDatabase: DatabaseReference!
+    
+    //firebase STORAGE variable
+    var refStorage: StorageReference!
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Firebase Connection Code
+        //Firebase DATABASE Connection Code
         FirebaseApp.configure()
         
         refDatabase = Database.database(url: "https://hairsalonscheduler.firebaseio.com/").reference(fromURL: "https://hairsalonscheduler.firebaseio.com/").child("Clients")
+        
+        //Firebase STORAGE Connection Code
+        refStorage = Storage.storage(url: "https//hairsalonscheduler.appspot.com").reference(forURL: "https//hairsalonscheduler.appspot.com").child("Profile Images")
+        
         
         // Do any additional setup after loading the view, typically from a nib.
         createGenderPicker()
@@ -66,9 +74,18 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
                     "AreaCode": areaCodeTextField.text! as String,
                     "Office Prefix": officePrefixTextField.text! as String,
                     "Line Number": lineNumberTextField.text! as String,
-                    "Profile Image": imageView.image as Any];
+                    "Address": addressTextField.text! as String,
+                    "Notes": notesTextField.text! as String];
         
         refDatabase.child(key).setValue(client)
+        
+        //let uploadTask = refStorage.putFile(from: imageView, metadata: nil) { metadata, error in
+            //if let error = error {
+                // Uh-oh, an error occurred!
+            //} else {
+                // Metadata contains file metadata such as size, content-type, and download URL.
+                //let downloadURL = metadata!.downloadURL()
+            //}
         
         
     }
