@@ -50,6 +50,24 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
         self.lineNumberTextField.delegate = self
     }
     
+    //function to add info to database
+    func addNewClient(){
+        
+        let key = refDatabase.childByAutoId().key
+        
+        let client = ["id": key,
+                    "First Name": firstNameTextField.text! as String,
+                    "Last Name:": lastNameTextField.text! as String,
+                    "Gender": genderTextField.text! as String,
+                    "AreaCode": areaCodeTextField.text! as String,
+                    "Office Prefix": officePrefixTextField.text! as String,
+                    "Line Number": lineNumberTextField.text! as String];
+        
+        refDatabase.child(key).setValue(client)
+        
+        
+    }
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String)-> Bool {
         let allowedCharacters = CharacterSet.decimalDigits
         let characterSet = CharacterSet(charactersIn: string)
