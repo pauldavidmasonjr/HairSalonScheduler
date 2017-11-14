@@ -21,7 +21,8 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
     @IBOutlet var areaCodeTextField: UITextField!
     @IBOutlet var officePrefixTextField: UITextField!
     @IBOutlet var lineNumberTextField: UITextField!
-    
+    @IBOutlet var addressTextField: UITextField!
+    @IBOutlet var notesTextField: UITextView!
     
     // gender array
     let gender = ["Male",
@@ -50,6 +51,9 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
         self.lineNumberTextField.delegate = self
     }
     
+    @IBAction func createClient(_ sender: Any) {
+        addNewClient()
+    }
     //function to add info to database
     func addNewClient(){
         
