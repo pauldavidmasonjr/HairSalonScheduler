@@ -66,6 +66,8 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
                     "AreaCode": areaCodeTextField.text! as String,
                     "Office Prefix": officePrefixTextField.text! as String,
                     "Line Number": lineNumberTextField.text! as String,
+                    "Address": addressTextField.text! as String,
+                    "Notes": notesTextField.text! as String,
                     "Profile Image": imageView.image as Any];
         
         refDatabase.child(key).setValue(client)
