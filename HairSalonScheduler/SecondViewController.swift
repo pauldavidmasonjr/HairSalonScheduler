@@ -35,7 +35,7 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
     var refDatabase: DatabaseReference!
     
     //firebase STORAGE variable
-    var refStorage: StorageReference!
+    //var refStorage: StorageReference!
     
     
     
@@ -48,7 +48,7 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
         refDatabase = Database.database(url: "https://hairsalonscheduler.firebaseio.com/").reference(fromURL: "https://hairsalonscheduler.firebaseio.com/").child("Clients")
         
         //Firebase STORAGE Connection Code
-        refStorage = Storage.storage(url: "https//hairsalonscheduler.appspot.com").reference(forURL: "https//hairsalonscheduler.appspot.com").child("Profile Images")
+        //refStorage = Storage.storage(url: "https//hairsalonscheduler.appspot.com").reference(forURL: "https//hairsalonscheduler.appspot.com").child("Profile Images")
         
         
         // Do any additional setup after loading the view, typically from a nib.
