@@ -64,6 +64,7 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
     }
     //function to add info to database
     func addNewClient(){
+        print("adding new client to the database")
         
         let key = refDatabase.childByAutoId().key
         
