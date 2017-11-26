@@ -8,7 +8,7 @@
 
 import UIKit
 import Firebase
-
+// new client
 class SecondViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate{
 
     // image view for photo upload

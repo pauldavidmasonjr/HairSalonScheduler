@@ -20,7 +20,7 @@
 		E388954E1FB241FC00F14A33 /* HairSalonSchedulerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E388954D1FB241FC00F14A33 /* HairSalonSchedulerTests.swift */; };
 		E38895591FB241FC00F14A33 /* HairSalonSchedulerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38895581FB241FC00F14A33 /* HairSalonSchedulerUITests.swift */; };
 		F3D0122F1FB2C36100AEE99E /* textFieldMaxLengths.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D0122E1FB2C36100AEE99E /* textFieldMaxLengths.swift */; };
-		F3EED0271FB4EDFD006FC613 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EED0261FB4EDFD006FC613 /* ThirdViewController.swift */; };
+		F3E33D421FC0AD2800852C62 /* clientTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E33D411FC0AD2800852C62 /* clientTracker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +66,7 @@
 		E38895581FB241FC00F14A33 /* HairSalonSchedulerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HairSalonSchedulerUITests.swift; sourceTree = "<group>"; };
 		E388955A1FB241FC00F14A33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3D0122E1FB2C36100AEE99E /* textFieldMaxLengths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textFieldMaxLengths.swift; sourceTree = "<group>"; };
-		F3EED0261FB4EDFD006FC613 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		F3E33D411FC0AD2800852C62 /* clientTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clientTracker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,8 +149,8 @@
 				E38895361FB241FC00F14A33 /* AppDelegate.swift */,
 				E38895381FB241FC00F14A33 /* FirstViewController.swift */,
 				E388953A1FB241FC00F14A33 /* SecondViewController.swift */,
+				F3E33D411FC0AD2800852C62 /* clientTracker.swift */,
 				E388953C1FB241FC00F14A33 /* Main.storyboard */,
-				F3EED0261FB4EDFD006FC613 /* ThirdViewController.swift */,
 				F3D0122E1FB2C36100AEE99E /* textFieldMaxLengths.swift */,
 				E388953F1FB241FC00F14A33 /* Assets.xcassets */,
 				E38895411FB241FC00F14A33 /* LaunchScreen.storyboard */,
@@ -477,8 +477,8 @@
 			files = (
 				F3D0122F1FB2C36100AEE99E /* textFieldMaxLengths.swift in Sources */,
 				E388953B1FB241FC00F14A33 /* SecondViewController.swift in Sources */,
-				F3EED0271FB4EDFD006FC613 /* ThirdViewController.swift in Sources */,
 				E38895371FB241FC00F14A33 /* AppDelegate.swift in Sources */,
+				F3E33D421FC0AD2800852C62 /* clientTracker.swift in Sources */,
 				E38895391FB241FC00F14A33 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
