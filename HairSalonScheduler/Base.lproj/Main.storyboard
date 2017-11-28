@@ -11,6 +11,51 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Client Tracker-->
+        <scene sceneID="1YV-FW-3YW">
+            <objects>
+                <tableViewController id="csd-ck-9wy" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="HxN-eE-qs1">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="sh5-Jp-dtv">
+                                <rect key="frame" x="0.0" y="28" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sh5-Jp-dtv" id="9vh-oB-RVt">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="csd-ck-9wy" id="6Ww-fm-3Zp"/>
+                            <outlet property="delegate" destination="csd-ck-9wy" id="Em5-Bu-alj"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Client Tracker" id="b5c-5J-fU8"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QJa-c5-b25" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1650" y="-1545"/>
+        </scene>
+        <!--Client Tracker-->
+        <scene sceneID="ByH-AZ-s1d">
+            <objects>
+                <navigationController id="UdU-i6-JAo" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Client Tracker" id="9pO-t0-Mjd"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5Wy-P7-LIc">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="csd-ck-9wy" kind="relationship" relationship="rootViewController" id="1oH-Ai-pEC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b5O-hR-5YG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="748" y="-1545"/>
+        </scene>
         <!--New Client-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
@@ -267,6 +312,7 @@
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="0jn-a8-4Mh" kind="relationship" relationship="viewControllers" id="0NJ-GF-MU3"/>
                         <segue destination="QKw-3G-7cM" kind="relationship" relationship="viewControllers" id="457-Ga-iam"/>
+                        <segue destination="UdU-i6-JAo" kind="relationship" relationship="viewControllers" id="op6-YO-lI1"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
