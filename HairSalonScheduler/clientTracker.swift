@@ -7,10 +7,19 @@
 //
 
 import UIKit
+import Firebase
 
 class clientTracker: UITableViewController {
+    
+    var refDatabase: DatabaseReference!
 
     override func viewDidLoad() {
+        
+        refDatabase = Database.database(url: "https://hairsalonscheduler.firebaseio.com/").reference(fromURL: "https://hairsalonscheduler.firebaseio.com/").child("Clients")
+        
+        print("Hello 1")
+        
+        createDataSource()
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
@@ -18,6 +27,16 @@ class clientTracker: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    func createDataSource(){
+        
+        refDatabase.observe(.value, with: {(snapshot) in
+            let value = snapshot.value as? NSDictionary
+            print(value)
+        }) {(error) in
+            print(error.localizedDescription)
+        }
     }
 
     override func didReceiveMemoryWarning() {

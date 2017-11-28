@@ -14,7 +14,7 @@
         <!--Client Tracker-->
         <scene sceneID="1YV-FW-3YW">
             <objects>
-                <tableViewController id="csd-ck-9wy" sceneMemberID="viewController">
+                <tableViewController id="csd-ck-9wy" customClass="clientTracker" customModule="HairSalonScheduler" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="HxN-eE-qs1">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,7 +38,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QJa-c5-b25" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1650" y="-1545"/>
+            <point key="canvasLocation" x="1440" y="-1545"/>
         </scene>
         <!--Client Tracker-->
         <scene sceneID="ByH-AZ-s1d">
