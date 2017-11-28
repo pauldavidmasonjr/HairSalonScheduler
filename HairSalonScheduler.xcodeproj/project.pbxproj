@@ -10,7 +10,6 @@
 		002A854F6FDECF621CC0F40E /* Pods_HairSalonScheduler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D9605C6E107A7EA5D54E39 /* Pods_HairSalonScheduler.framework */; };
 		7D790CD953CB48A24C0FE329 /* Pods_HairSalonSchedulerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4707176E5FC2C7C933468DDC /* Pods_HairSalonSchedulerUITests.framework */; };
 		81500F80BB15D9DDA6F7698E /* Pods_HairSalonSchedulerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A24F8FFC304FCF60BD7508EC /* Pods_HairSalonSchedulerTests.framework */; };
-		E3096DE41FB752F9005076A7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3096DE31FB752F8005076A7 /* GoogleService-Info.plist */; };
 		E38895371FB241FC00F14A33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38895361FB241FC00F14A33 /* AppDelegate.swift */; };
 		E38895391FB241FC00F14A33 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38895381FB241FC00F14A33 /* FirstViewController.swift */; };
 		E388953B1FB241FC00F14A33 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E388953A1FB241FC00F14A33 /* SecondViewController.swift */; };
@@ -19,6 +18,7 @@
 		E38895431FB241FC00F14A33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E38895411FB241FC00F14A33 /* LaunchScreen.storyboard */; };
 		E388954E1FB241FC00F14A33 /* HairSalonSchedulerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E388954D1FB241FC00F14A33 /* HairSalonSchedulerTests.swift */; };
 		E38895591FB241FC00F14A33 /* HairSalonSchedulerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38895581FB241FC00F14A33 /* HairSalonSchedulerUITests.swift */; };
+		F37C27B71FCDEF2D00039EBD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F37C27B61FCDEF2C00039EBD /* GoogleService-Info.plist */; };
 		F3D0122F1FB2C36100AEE99E /* textFieldMaxLengths.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D0122E1FB2C36100AEE99E /* textFieldMaxLengths.swift */; };
 		F3E33D421FC0AD2800852C62 /* clientTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E33D411FC0AD2800852C62 /* clientTracker.swift */; };
 /* End PBXBuildFile section */
@@ -50,7 +50,6 @@
 		A24F8FFC304FCF60BD7508EC /* Pods_HairSalonSchedulerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HairSalonSchedulerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD07E09D7F3F563984E81BAF /* Pods-HairSalonSchedulerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HairSalonSchedulerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HairSalonSchedulerTests/Pods-HairSalonSchedulerTests.release.xcconfig"; sourceTree = "<group>"; };
 		C0B7D34719DBE24C2C97452B /* Pods-HairSalonScheduler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HairSalonScheduler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HairSalonScheduler/Pods-HairSalonScheduler.debug.xcconfig"; sourceTree = "<group>"; };
-		E3096DE31FB752F8005076A7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E38895331FB241FC00F14A33 /* HairSalonScheduler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HairSalonScheduler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E38895361FB241FC00F14A33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E38895381FB241FC00F14A33 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +64,7 @@
 		E38895541FB241FC00F14A33 /* HairSalonSchedulerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HairSalonSchedulerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E38895581FB241FC00F14A33 /* HairSalonSchedulerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HairSalonSchedulerUITests.swift; sourceTree = "<group>"; };
 		E388955A1FB241FC00F14A33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F37C27B61FCDEF2C00039EBD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F3D0122E1FB2C36100AEE99E /* textFieldMaxLengths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textFieldMaxLengths.swift; sourceTree = "<group>"; };
 		F3E33D411FC0AD2800852C62 /* clientTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clientTracker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,7 +123,7 @@
 		E388952A1FB241FC00F14A33 = {
 			isa = PBXGroup;
 			children = (
-				E3096DE31FB752F8005076A7 /* GoogleService-Info.plist */,
+				F37C27B61FCDEF2C00039EBD /* GoogleService-Info.plist */,
 				E38895351FB241FC00F14A33 /* HairSalonScheduler */,
 				E388954C1FB241FC00F14A33 /* HairSalonSchedulerTests */,
 				E38895571FB241FC00F14A33 /* HairSalonSchedulerUITests */,
@@ -292,7 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E38895431FB241FC00F14A33 /* LaunchScreen.storyboard in Resources */,
-				E3096DE41FB752F9005076A7 /* GoogleService-Info.plist in Resources */,
+				F37C27B71FCDEF2D00039EBD /* GoogleService-Info.plist in Resources */,
 				E38895401FB241FC00F14A33 /* Assets.xcassets in Resources */,
 				E388953E1FB241FC00F14A33 /* Main.storyboard in Resources */,
 			);
@@ -537,7 +537,7 @@
 		E388955B1FB241FC00F14A33 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-                ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
