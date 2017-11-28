@@ -32,7 +32,7 @@ class clientTracker: UITableViewController {
     func createDataSource(){
         
         refDatabase.observe(.value, with: {(snapshot) in
-            let value = snapshot.value as? NSDictionary
+            let value = snapshot.child("First Name").value as? String
             print(value)
         }) {(error) in
             print(error.localizedDescription)

@@ -10,7 +10,6 @@
 		002A854F6FDECF621CC0F40E /* Pods_HairSalonScheduler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D9605C6E107A7EA5D54E39 /* Pods_HairSalonScheduler.framework */; };
 		7D790CD953CB48A24C0FE329 /* Pods_HairSalonSchedulerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4707176E5FC2C7C933468DDC /* Pods_HairSalonSchedulerUITests.framework */; };
 		81500F80BB15D9DDA6F7698E /* Pods_HairSalonSchedulerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A24F8FFC304FCF60BD7508EC /* Pods_HairSalonSchedulerTests.framework */; };
-		E3041CF51FCDF7C200A65417 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3041CF41FCDF7C200A65417 /* GoogleService-Info.plist */; };
 		E38895371FB241FC00F14A33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38895361FB241FC00F14A33 /* AppDelegate.swift */; };
 		E38895391FB241FC00F14A33 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38895381FB241FC00F14A33 /* FirstViewController.swift */; };
 		E388953B1FB241FC00F14A33 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E388953A1FB241FC00F14A33 /* SecondViewController.swift */; };
