@@ -9,31 +9,35 @@
 import UIKit
 import Foundation
 import Firebase
+import FirebaseDatabase
+
 
 struct clientStruct {
-    let AreaCode: String!
-    let firstName: String!
-    let lastName: String!
-    let gender: String!
-    let lineNumber: String!
-    let officePrefix: String!
-    let address: String!
+    let name : String!
+    let phoneNumber : String!
 }
 
-class clientTracker: UITableViewController {
+class clientTracker: UITableViewController{
     var ref : DatabaseReference!
     
     var clients = [clientStruct]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ref = Database.database().reference()
         
+
+        
+        
+        ref = Database.database().reference()
+        //ref.child("Clients").queryOrderedByKey().observe(.value, with: { DataSnapshot in
+        
+            
         ref.child("Clients").observe(.childAdded, with: { DataSnapshot in
             // store key value for each client
-            let key = DataSnapshot.key
-            
+            //let key = DataSnapshot.key
             // put each client in a dictionary for array access.
+            
+            
             let client = DataSnapshot.value as! NSDictionary
             
             let areaCode = client["AreaCode"] as! String
@@ -44,37 +48,46 @@ class clientTracker: UITableViewController {
             let officePrefix = client["Office Prefix"] as! String
             let address = client["Address"] as! String
             
-            self.clients.append(clientStruct(AreaCode: areaCode, firstName: firstName, lastName: lastName, gender: gender, lineNumber: lineNumber, officePrefix: officePrefix, address: address))
+            self.clients.append(clientStruct(name: firstName + " " + lastName, phoneNumber: "("+areaCode+")"+officePrefix+"-"+lineNumber))
+            
+            self.tableView.reloadData()
 
             print("Number of Clients")
             print(self.clients.count)
             print(self.clients)
+             
         })
         
         
         
     }
-    
-    func getClients()
-    {
-        
-    
-    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
+
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return clients.count
     }
-
- 
-
+    
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "customCell")
+        
+        let label1 = cell?.viewWithTag(1) as! UILabel
+        label1.text = clients[indexPath.row].name
+        
+        let label2 = cell?.viewWithTag(2) as! UILabel
+        label2.text = clients[indexPath.row].phoneNumber
+        return cell!
+    }
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

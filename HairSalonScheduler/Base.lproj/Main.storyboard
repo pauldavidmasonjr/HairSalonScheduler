@@ -262,33 +262,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="105" id="xkC-ej-r5B">
-                                <rect key="frame" x="0.0" y="28" width="768" height="105"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" rowHeight="100" id="xkC-ej-r5B">
+                                <rect key="frame" x="0.0" y="28" width="768" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xkC-ej-r5B" id="O9e-pP-zRP">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="104.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tGZ-Xz-OeT">
-                                            <rect key="frame" x="20" y="11" width="728" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDp-vR-9cK">
+                                            <rect key="frame" x="10" y="16" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MA6-gt-jah">
-                                            <rect key="frame" x="20" y="61" width="728" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="svc-kM-fcg">
+                                            <rect key="frame" x="10" y="47" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="MA6-gt-jah" secondAttribute="trailing" constant="20" id="6s9-ai-tKN"/>
-                                        <constraint firstAttribute="trailing" secondItem="tGZ-Xz-OeT" secondAttribute="trailing" constant="20" id="JiP-2A-1Sx"/>
-                                        <constraint firstItem="MA6-gt-jah" firstAttribute="top" secondItem="tGZ-Xz-OeT" secondAttribute="bottom" constant="29" id="Yw8-6x-8ob"/>
-                                        <constraint firstItem="tGZ-Xz-OeT" firstAttribute="top" secondItem="O9e-pP-zRP" secondAttribute="top" constant="11" id="ZE1-hx-MHp"/>
-                                        <constraint firstItem="tGZ-Xz-OeT" firstAttribute="leading" secondItem="O9e-pP-zRP" secondAttribute="leading" constant="20" id="gEf-Dk-SuH"/>
-                                        <constraint firstItem="MA6-gt-jah" firstAttribute="leading" secondItem="O9e-pP-zRP" secondAttribute="leading" constant="20" id="xNU-3K-UJ5"/>
+                                        <constraint firstAttribute="bottom" secondItem="svc-kM-fcg" secondAttribute="bottom" constant="31.5" id="0Rv-Sa-Gjk"/>
+                                        <constraint firstItem="svc-kM-fcg" firstAttribute="leading" secondItem="O9e-pP-zRP" secondAttribute="leading" constant="10" id="4r7-r7-WEx"/>
+                                        <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="svc-kM-fcg" secondAttribute="trailing" constant="716" id="93W-WF-Gwb"/>
+                                        <constraint firstItem="iDp-vR-9cK" firstAttribute="top" secondItem="O9e-pP-zRP" secondAttribute="top" constant="16" id="LbN-kt-iCl"/>
+                                        <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="iDp-vR-9cK" secondAttribute="trailing" constant="716" id="dqo-8R-wsh"/>
+                                        <constraint firstItem="iDp-vR-9cK" firstAttribute="leading" secondItem="O9e-pP-zRP" secondAttribute="leading" constant="10" id="hIt-w0-V4S"/>
+                                        <constraint firstItem="svc-kM-fcg" firstAttribute="top" secondItem="iDp-vR-9cK" secondAttribute="bottom" constant="10" id="pqp-Xc-ACj"/>
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
