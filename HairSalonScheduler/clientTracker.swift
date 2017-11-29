@@ -16,10 +16,7 @@ class clientTracker: UITableViewController {
     override func viewDidLoad() {
         
         refDatabase = Database.database(url: "https://hairsalonscheduler.firebaseio.com/").reference(fromURL: "https://hairsalonscheduler.firebaseio.com/").child("Clients")
-        
-        print("Hello 1")
-        
-        createDataSource()
+
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
@@ -29,16 +26,7 @@ class clientTracker: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
-    func createDataSource(){
-        
-        refDatabase.observe(.value, with: {(snapshot) in
-            let value = snapshot.child("First Name").value as? String
-            print(value)
-        }) {(error) in
-            print(error.localizedDescription)
-        }
-    }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
