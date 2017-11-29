@@ -2,43 +2,64 @@
 //  clientTracker.swift
 //  HairSalonScheduler
 //
-//  Created by Gregory Harston on 11/18/17.
+//  Created by Gregory Harston on 11/28/17.
 //  Copyright © 2017 Paul Mason. All rights reserved.
 //
 
 import UIKit
+import Foundation
 import Firebase
 
+struct clientStruct {
+    let AreaCode: String!
+    let firstName: String!
+    let lastName: String!
+    let gender: String!
+    let lineNumber: String!
+    let officePrefix: String!
+    let address: String!
+}
+
 class clientTracker: UITableViewController {
+    var ref : DatabaseReference!
     
-    var refDatabase: DatabaseReference!
-
+    var clients = [clientStruct]()
+    
     override func viewDidLoad() {
-        
-        refDatabase = Database.database(url: "https://hairsalonscheduler.firebaseio.com/").reference(fromURL: "https://hairsalonscheduler.firebaseio.com/").child("Clients")
-        
-        print("Hello 1")
-        
-        createDataSource()
         super.viewDidLoad()
+        ref = Database.database().reference()
+        
+        ref.child("Clients").observe(.childAdded, with: { DataSnapshot in
+            // store key value for each client
+            let key = DataSnapshot.key
+            
+            // put each client in a dictionary for array access.
+            let client = DataSnapshot.value as! NSDictionary
+            
+            let areaCode = client["AreaCode"] as! String
+            let firstName = client["First Name"] as! String
+            let lastName = client["Last Name:"] as! String
+            let gender = client["Gender"] as! String
+            let lineNumber = client["Line Number"] as! String
+            let officePrefix = client["Office Prefix"] as! String
+            let address = client["Address"] as! String
+            
+            self.clients.append(clientStruct(AreaCode: areaCode, firstName: firstName, lastName: lastName, gender: gender, lineNumber: lineNumber, officePrefix: officePrefix, address: address))
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+            print("Number of Clients")
+            print(self.clients.count)
+            print(self.clients)
+        })
+        
+        
+        
     }
     
-    func createDataSource(){
+    func getClients()
+    {
         
-        refDatabase.observe(.value, with: {(snapshot) in
-            let value = snapshot.value as? NSDictionary
-            print(value)
-        }) {(error) in
-            print(error.localizedDescription)
-        }
+    
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -46,25 +67,13 @@ class clientTracker: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         // #warning Incomplete implementation, return the number of rows
         return 0
     }
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
+ 
 
     /*
     // Override to support conditional editing of the table view.

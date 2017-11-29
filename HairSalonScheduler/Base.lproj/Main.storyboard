@@ -11,51 +11,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Client Tracker-->
-        <scene sceneID="1YV-FW-3YW">
-            <objects>
-                <tableViewController id="csd-ck-9wy" customClass="clientTracker" customModule="HairSalonScheduler" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="HxN-eE-qs1">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="sh5-Jp-dtv">
-                                <rect key="frame" x="0.0" y="28" width="768" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sh5-Jp-dtv" id="9vh-oB-RVt">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="csd-ck-9wy" id="6Ww-fm-3Zp"/>
-                            <outlet property="delegate" destination="csd-ck-9wy" id="Em5-Bu-alj"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Client Tracker" id="b5c-5J-fU8"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QJa-c5-b25" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1440" y="-1545"/>
-        </scene>
-        <!--Client Tracker-->
-        <scene sceneID="ByH-AZ-s1d">
-            <objects>
-                <navigationController id="UdU-i6-JAo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Client Tracker" id="9pO-t0-Mjd"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5Wy-P7-LIc">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="csd-ck-9wy" kind="relationship" relationship="rootViewController" id="1oH-Ai-pEC"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="b5O-hR-5YG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="748" y="-1545"/>
-        </scene>
         <!--New Client-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
@@ -298,6 +253,76 @@
             </objects>
             <point key="canvasLocation" x="747.65625" y="-855.46875"/>
         </scene>
+        <!--Client Tracker-->
+        <scene sceneID="SZs-oc-yYr">
+            <objects>
+                <tableViewController title="Client Tracker" id="oPV-lT-30P" customClass="clientTracker" customModule="HairSalonScheduler" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="T04-oX-R0s" customClass="client">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="105" id="xkC-ej-r5B">
+                                <rect key="frame" x="0.0" y="28" width="768" height="105"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xkC-ej-r5B" id="O9e-pP-zRP">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="104.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tGZ-Xz-OeT">
+                                            <rect key="frame" x="20" y="11" width="728" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MA6-gt-jah">
+                                            <rect key="frame" x="20" y="61" width="728" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="MA6-gt-jah" secondAttribute="trailing" constant="20" id="6s9-ai-tKN"/>
+                                        <constraint firstAttribute="trailing" secondItem="tGZ-Xz-OeT" secondAttribute="trailing" constant="20" id="JiP-2A-1Sx"/>
+                                        <constraint firstItem="MA6-gt-jah" firstAttribute="top" secondItem="tGZ-Xz-OeT" secondAttribute="bottom" constant="29" id="Yw8-6x-8ob"/>
+                                        <constraint firstItem="tGZ-Xz-OeT" firstAttribute="top" secondItem="O9e-pP-zRP" secondAttribute="top" constant="11" id="ZE1-hx-MHp"/>
+                                        <constraint firstItem="tGZ-Xz-OeT" firstAttribute="leading" secondItem="O9e-pP-zRP" secondAttribute="leading" constant="20" id="gEf-Dk-SuH"/>
+                                        <constraint firstItem="MA6-gt-jah" firstAttribute="leading" secondItem="O9e-pP-zRP" secondAttribute="leading" constant="20" id="xNU-3K-UJ5"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="oPV-lT-30P" id="Gbd-r5-fM2"/>
+                            <outlet property="delegate" destination="oPV-lT-30P" id="h4a-Bp-HE4"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Client Tracker" id="Aeu-Ne-IE6"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="k7N-Dv-pXi">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Bt-ij-qEy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="726.5625" y="-1527.5390625"/>
+        </scene>
+        <!--Client Tracker-->
+        <scene sceneID="YdQ-1E-zrG">
+            <objects>
+                <navigationController id="X8c-sI-Hqd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Client Tracker" id="OdL-Gz-Url"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2Ls-5H-g7u">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="oPV-lT-30P" kind="relationship" relationship="rootViewController" id="klR-gE-Loz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="azh-8p-Vb5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-44" y="-1527"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
@@ -312,7 +337,7 @@
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="0jn-a8-4Mh" kind="relationship" relationship="viewControllers" id="0NJ-GF-MU3"/>
                         <segue destination="QKw-3G-7cM" kind="relationship" relationship="viewControllers" id="457-Ga-iam"/>
-                        <segue destination="UdU-i6-JAo" kind="relationship" relationship="viewControllers" id="op6-YO-lI1"/>
+                        <segue destination="X8c-sI-Hqd" kind="relationship" relationship="viewControllers" id="pGQ-s5-Iyq"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
