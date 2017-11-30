@@ -15,6 +15,8 @@ import FirebaseDatabase
 struct clientStruct {
     let name : String!
     let phoneNumber : String!
+    let address : String!
+    let gender : String!
 }
 
 class clientTracker: UITableViewController{
@@ -48,7 +50,7 @@ class clientTracker: UITableViewController{
             let officePrefix = client["Office Prefix"] as! String
             let address = client["Address"] as! String
             
-            self.clients.append(clientStruct(name: firstName + " " + lastName, phoneNumber: "("+areaCode+")"+officePrefix+"-"+lineNumber))
+            self.clients.append(clientStruct(name: firstName + " " + lastName, phoneNumber: "("+areaCode+")"+officePrefix+"-"+lineNumber, address: address, gender: gender))
             
             self.tableView.reloadData()
 
@@ -84,6 +86,12 @@ class clientTracker: UITableViewController{
         
         let label2 = cell?.viewWithTag(2) as! UILabel
         label2.text = clients[indexPath.row].phoneNumber
+        
+        let label3 = cell?.viewWithTag(3) as! UILabel
+        label3.text = clients[indexPath.row].address
+        
+        let label4 = cell?.viewWithTag(4) as! UILabel
+        label4.text = clients[indexPath.row].gender
         return cell!
     }
     
