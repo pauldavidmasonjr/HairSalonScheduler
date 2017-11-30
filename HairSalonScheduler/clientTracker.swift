@@ -13,16 +13,21 @@ import FirebaseDatabase
 
 
 struct clientStruct {
-    let name : String!
-    let phoneNumber : String!
     let address : String!
     let gender : String!
+    let areaCode : String!
+    let officePrefix : String!
+    let lineNumber : String!
+    let firstName : String!
+    let lastName : String!
 }
 
 class clientTracker: UITableViewController{
     var ref : DatabaseReference!
     
     var clients = [clientStruct]()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,10 +55,9 @@ class clientTracker: UITableViewController{
             let officePrefix = client["Office Prefix"] as! String
             let address = client["Address"] as! String
             
-            self.clients.append(clientStruct(name: firstName + " " + lastName, phoneNumber: "("+areaCode+")"+officePrefix+"-"+lineNumber, address: address, gender: gender))
+            self.clients.append(clientStruct(address: address, gender: gender, areaCode: areaCode, officePrefix: officePrefix, lineNumber: lineNumber, firstName: firstName, lastName: lastName))
             
             self.tableView.reloadData()
-
             print("Number of Clients")
             print(self.clients.count)
             print(self.clients)
@@ -82,10 +86,10 @@ class clientTracker: UITableViewController{
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell")
         
         let label1 = cell?.viewWithTag(1) as! UILabel
-        label1.text = clients[indexPath.row].name
+        label1.text = clients[indexPath.row].firstName + " " + clients[indexPath.row].lastName
         
         let label2 = cell?.viewWithTag(2) as! UILabel
-        label2.text = clients[indexPath.row].phoneNumber
+        label2.text = "(" + clients[indexPath.row].areaCode + ")" + clients[indexPath.row].officePrefix + "-" + clients[indexPath.row].lineNumber
         
         let label3 = cell?.viewWithTag(3) as! UILabel
         label3.text = clients[indexPath.row].address
@@ -94,7 +98,10 @@ class clientTracker: UITableViewController{
         label4.text = clients[indexPath.row].gender
         return cell!
     }
-    
+
+    //override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    //    <#code#>
+    //}
     
     /*
     // Override to support conditional editing of the table view.

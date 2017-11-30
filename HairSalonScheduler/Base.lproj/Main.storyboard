@@ -310,6 +310,9 @@
                                         <constraint firstAttribute="trailing" secondItem="ruG-WX-nEd" secondAttribute="trailing" constant="20" id="wsQ-NQ-6Ne"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="pGV-xI-wAV" kind="show" trigger="accessoryAction" id="VtB-kN-iyT"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -325,6 +328,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Bt-ij-qEy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="726.5625" y="-1527.5390625"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fIM-MC-MmH">
+            <objects>
+                <viewController id="pGV-xI-wAV" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mWK-Ya-utp"/>
+                        <viewControllerLayoutGuide type="bottom" id="z9Q-KC-4lY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Srr-F9-kEq">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K4F-sN-eNd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1484" y="-1528"/>
         </scene>
         <!--Client Tracker-->
         <scene sceneID="YdQ-1E-zrG">
