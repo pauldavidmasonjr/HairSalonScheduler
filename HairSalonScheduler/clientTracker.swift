@@ -12,15 +12,7 @@ import Firebase
 import FirebaseDatabase
 
 
-struct clientStruct {
-    let address : String!
-    let gender : String!
-    let areaCode : String!
-    let officePrefix : String!
-    let lineNumber : String!
-    let firstName : String!
-    let lastName : String!
-}
+
 
 class clientTracker: UITableViewController{
     var ref : DatabaseReference!
@@ -54,8 +46,9 @@ class clientTracker: UITableViewController{
             let lineNumber = client["Line Number"] as! String
             let officePrefix = client["Office Prefix"] as! String
             let address = client["Address"] as! String
+            let notes = client["Notes"] as! String
             
-            self.clients.append(clientStruct(address: address, gender: gender, areaCode: areaCode, officePrefix: officePrefix, lineNumber: lineNumber, firstName: firstName, lastName: lastName))
+            self.clients.append(clientStruct(address: address, gender: gender, areaCode: areaCode, officePrefix: officePrefix, lineNumber: lineNumber, firstName: firstName, lastName: lastName, notes: notes))
             
             self.tableView.reloadData()
             print("Number of Clients")
@@ -99,6 +92,12 @@ class clientTracker: UITableViewController{
         return cell!
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destViewContorller = segue.destination as! ViewController
+        let indexPath : NSIndexPath = self.tableView.indexPathForSelectedRow! as NSIndexPath
+        destViewContorller.passedArray = [clients[indexPath.row]]
+        
+    }
     //override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     //    <#code#>
     //}
