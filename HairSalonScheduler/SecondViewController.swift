@@ -10,7 +10,10 @@ import UIKit
 import Firebase
 // new client
 class SecondViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate{
-
+    var alertController: UIAlertController?
+    var alertTimer: Timer?
+    var remainingTime = 0
+    var baseMessage: String?
     // image view for photo upload
     @IBOutlet var imageView: UIImageView!
     
@@ -60,8 +63,88 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
     }
     
     @IBAction func createClient(_ sender: Any) {
-        addNewClient()
+        if !hasErrors(){
+            
+            addNewClient()
+            
+            moveToFirstViewController()
+        }
     }
+    
+    func moveToFirstViewController() {
+        self.tabBarController?.selectedIndex = 1
+    }
+    
+    func hasErrors() -> Bool{
+        var errors = false
+        let title = "ERROR"
+        var message = ""
+        //check first name field
+        if firstNameTextField.text!.isEmpty {
+            errors = true
+            message += "First Name is Empty\nPlease fill in all fields"
+            alertWithTitle(title: title, message: message, SecondViewController: self, toFocus: firstNameTextField)
+        }
+        //check last name field
+        else if lastNameTextField.text!.isEmpty {
+            errors = true
+            message += "Last Name is Empty\nPlease fill in all fields"
+            alertWithTitle(title: title, message: message, SecondViewController: self, toFocus: lastNameTextField)
+        }
+        //check gender field
+        else if genderTextField.text!.isEmpty {
+            errors = true
+            message += "Gender is Empty\nPlease fill in all fields"
+            alertWithTitle(title: title, message: message, SecondViewController: self, toFocus: genderTextField)
+        }
+        //check phone number fields
+        else if areaCodeTextField.text!.isEmpty {
+            errors = true
+            message += "Area Code is Empty\nPlease fill in all fields"
+            alertWithTitle(title: title, message: message, SecondViewController: self, toFocus: areaCodeTextField)
+        }
+        else if officePrefixTextField.text!.isEmpty {
+            errors = true
+            message += "Office Prefix is Empty\nPlease fill in all fields"
+            alertWithTitle(title: title, message: message, SecondViewController: self, toFocus: officePrefixTextField)
+        }
+        else if lineNumberTextField.text!.isEmpty {
+            errors = true
+            message += "Line Number is Empty\nPlease Fill in all fields"
+            alertWithTitle(title: title, message: message, SecondViewController: self, toFocus: lineNumberTextField)
+        }
+        //check address field
+        else if addressTextField.text!.isEmpty {
+            errors = true
+            message += "Address is Empty\nPlease Fill in all fields"
+            alertWithTitle(title: title, message: message, SecondViewController: self, toFocus: addressTextField)
+        }
+        //check notes field
+        else if notesTextField.text.isEmpty {
+            errors = true
+            message += "Notes is Empty\nPlease Fill in all fields"
+            viewAlertWithTitle(title: title, message: message, SecondViewController: self, toFocus: notesTextField)
+        }
+        return errors
+    }
+    
+    func alertWithTitle(title: String!, message: String, SecondViewController: UIViewController, toFocus:UITextField) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel,handler: {_ in
+            toFocus.becomeFirstResponder()
+        });
+        alert.addAction(action)
+        SecondViewController.present(alert, animated: true, completion:nil)
+    }
+    func viewAlertWithTitle(title: String!, message: String, SecondViewController: UIViewController, toFocus:UITextView) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel,handler: {_ in
+            toFocus.becomeFirstResponder()
+        });
+        alert.addAction(action)
+        SecondViewController.present(alert, animated: true, completion:nil)
+    }
+    
     //function to add info to database
     func addNewClient(){
         print("adding new client to the database")
@@ -80,6 +163,8 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
         
         refDatabase.child(key).setValue(client)
         
+        self.showAlertMsg(title: "Success", message: "New Client Created", time: 3)
+        
         //let uploadTask = refStorage.putFile(from: imageView, metadata: nil) { metadata, error in
             //if let error = error {
                 // Uh-oh, an error occurred!
@@ -91,6 +176,54 @@ class SecondViewController: UIViewController, UINavigationControllerDelegate, UI
         
     }
     
+    func showAlertMsg(title: String, message: String, time: Int) {
+        
+        guard (self.alertController == nil) else {
+            print("Alert already displayed")
+            return
+        }
+        
+        self.baseMessage = message
+        self.remainingTime = time
+        
+        self.alertController = UIAlertController(title: title, message: self.alertMessage(), preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+            print("Alert was cancelled")
+            self.alertController=nil;
+            self.alertTimer?.invalidate()
+            self.alertTimer=nil
+        }
+        
+        self.alertController!.addAction(cancelAction)
+        
+        self.alertTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(SecondViewController.countDown), userInfo: nil, repeats: true)
+        
+        self.present(self.alertController!, animated: true, completion: nil)
+    }
+    func countDown() {
+        
+        self.remainingTime -= 1
+        if (self.remainingTime < 0) {
+            self.alertTimer?.invalidate()
+            self.alertTimer = nil
+            self.alertController!.dismiss(animated: true, completion: {
+                self.alertController = nil
+            })
+        } else {
+            self.alertController!.message = self.alertMessage()
+        }
+        
+    }
+    
+    func alertMessage() -> String {
+        var message=""
+        if let baseMessage=self.baseMessage {
+            message=baseMessage+" "
+        }
+        return(message+"\(self.remainingTime)")
+    }
+
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String)-> Bool {
         let allowedCharacters = CharacterSet.decimalDigits
         let characterSet = CharacterSet(charactersIn: string)

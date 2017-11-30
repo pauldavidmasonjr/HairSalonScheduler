@@ -592,10 +592,10 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="0jn-a8-4Mh" kind="relationship" relationship="viewControllers" id="0NJ-GF-MU3"/>
-                        <segue destination="QKw-3G-7cM" kind="relationship" relationship="viewControllers" id="457-Ga-iam"/>
-                        <segue destination="X8c-sI-Hqd" kind="relationship" relationship="viewControllers" id="pGQ-s5-Iyq"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="StJ-nF-Rci"/>
+                        <segue destination="0jn-a8-4Mh" kind="relationship" relationship="viewControllers" id="fs4-h6-93D"/>
+                        <segue destination="X8c-sI-Hqd" kind="relationship" relationship="viewControllers" id="FHw-6Z-lRd"/>
+                        <segue destination="QKw-3G-7cM" kind="relationship" relationship="viewControllers" id="tNE-Xr-ljt"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
