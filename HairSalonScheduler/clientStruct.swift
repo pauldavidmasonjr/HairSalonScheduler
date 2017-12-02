@@ -16,4 +16,5 @@ struct clientStruct {
     let firstName : String!
     let lastName : String!
     let notes : String!
+    let id : String!
 }

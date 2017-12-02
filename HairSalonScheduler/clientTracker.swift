@@ -20,7 +20,6 @@ class clientTracker: UITableViewController{
     var clients = [clientStruct]()
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,8 +46,10 @@ class clientTracker: UITableViewController{
             let officePrefix = client["Office Prefix"] as! String
             let address = client["Address"] as! String
             let notes = client["Notes"] as! String
+            let id = client["id"] as! String
             
-            self.clients.append(clientStruct(address: address, gender: gender, areaCode: areaCode, officePrefix: officePrefix, lineNumber: lineNumber, firstName: firstName, lastName: lastName, notes: notes))
+            
+            self.clients.append(clientStruct(address: address, gender: gender, areaCode: areaCode, officePrefix: officePrefix, lineNumber: lineNumber, firstName: firstName, lastName: lastName, notes: notes, id: id))
             
             self.tableView.reloadData()
             print("Number of Clients")

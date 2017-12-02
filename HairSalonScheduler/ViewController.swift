@@ -8,9 +8,16 @@
 
 import Foundation
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class ViewController: UIViewController {
+    var ref : DatabaseReference!
+    var passedArray = [clientStruct]()
+    var client = [String: String]()
+    var id : String!
     
+    @IBOutlet var updateClient: UIButton!
     @IBOutlet var firstNameTextField: UITextField!
     @IBOutlet var lastNameTextField: UITextField!
     @IBOutlet var genderTextField: UITextField!
@@ -20,12 +27,9 @@ class ViewController: UIViewController {
     @IBOutlet var addressTextField: UITextField!
     @IBOutlet var notesTextField: UITextView!
     
-    @IBOutlet var updateButton: UIButton!
-    
-    var passedArray = [clientStruct]()
-    
     override func viewDidLoad() {
         
+        id = passedArray[0].id
         firstNameTextField.text =    passedArray[0].firstName
         lastNameTextField.text =     passedArray[0].lastName
         genderTextField.text =       passedArray[0].gender
@@ -36,4 +40,24 @@ class ViewController: UIViewController {
         notesTextField.text =        passedArray[0].notes
         
     }
+    @IBAction func sendUpdate(_ sender: Any) {
+        let ref = Database.database().reference().child("Clients").child((id)!)
+        let client = ["First Name": firstNameTextField.text,
+                      "Last Name:": lastNameTextField.text,
+                      "Gender": genderTextField.text,
+                      "AreaCode": areaCodeTextField.text,
+                      "Office Prefix": officePrefixTextField.text,
+                      "Line Number": lineNumberTextField.text,
+                      "Address": addressTextField.text,
+                      "Notes": notesTextField.text]
+        ref.updateChildValues(client as Any as! [AnyHashable : Any])
+        
+        moveToClientTracker()
+    }
+    
+    //navigate back to client tracker
+    func moveToClientTracker() {
+        _ = navigationController?.popToRootViewController(animated: true)
+    }
+    
 }
